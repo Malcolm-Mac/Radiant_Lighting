@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { nativeStackConfig } from './nativeStackConfig';
 
 import Routes from './routes';
-import { CreateTask, Home, FlipASwitch, Landing, ScreenOptions, RecordVoice } from '@calendar/screens';
+import { Home, FlipASwitch, Landing, ScreenOptions, Brightness, LightTemperature } from '@calendar/screens';
 import { useStore } from '@calendar/store';
 
 const Stack = createStackNavigator();
@@ -15,9 +15,9 @@ function MainNavigatorWrapper() {
       <Stack.Screen component={Landing} name={Routes.LANDING} />
       <Stack.Screen component={ScreenOptions} name={Routes.SCREENOPTIONS} />
       <Stack.Screen component={Home} name={Routes.HOME} />
-      <Stack.Screen component={CreateTask} name={Routes.CREATE_TASK} />
       <Stack.Screen component={FlipASwitch} name={Routes.FLIPASWITCH} />
-      <Stack.Screen component={RecordVoice} name={Routes.RECORDVOICE} />
+      <Stack.Screen component={LightTemperature} name={Routes.LIGHTTEMPERATURE} />
+      <Stack.Screen component={Brightness} name={Routes.BRIGHTNESS} />
     </Stack.Navigator>
   );
 }

@@ -5,6 +5,8 @@ const Routes = {
   LANDING: 'Landing',
   SCREENOPTIONS: 'ScreenOptions',
   RECORDVOICE: 'RecordVoice',
+  BRIGHTNESS: 'Brightness',
+  LIGHTTEMPERATURE: 'LightTemperature'
 };
 
 export default Routes;

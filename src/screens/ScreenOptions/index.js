@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Button, TouchableHighlight } from 'react-native';
+import axios from 'axios';
 
 const ScreenOptions = ({ navigation }) => {
 
@@ -15,12 +16,22 @@ const ScreenOptions = ({ navigation }) => {
         navigation.navigate('RecordVoice')
     }
 
+
+    const switchToTemperatureScreen= ()=>{
+        navigation.navigate('LightTemperature')
+    }
+    
+
+    const switchToBrightnessScreen= ()=>{
+        navigation.navigate('Brightness')
+    }
+
     return (
         <View style={styles.container}>
             <View>
                 <TouchableHighlight style={styles.buttonsStyle}>
                     <Button
-                        title="Switch"
+                        title="Switch The Light"
                         accessibilityLabel="Learn more about this purple button"
                         onPress={switchToSwitchScreen}
                     />
@@ -30,9 +41,9 @@ const ScreenOptions = ({ navigation }) => {
             <View>
                 <TouchableHighlight style={styles.buttonsStyle}>
                     <Button
-                        title="Voice Recognition"
+                        title="Check Temperature"
                         accessibilityLabel="Learn more about this purple button"
-                        onPress={switchToVoiceScreen}
+                        onPress={switchToTemperatureScreen}
                     />
                 </TouchableHighlight>
             </View>
@@ -40,9 +51,9 @@ const ScreenOptions = ({ navigation }) => {
             <View>
                 <TouchableHighlight style={styles.buttonsStyle}>
                     <Button
-                        title="Schedule"
+                        title="Check Brightness"
                         accessibilityLabel="Learn more about this purple button"
-                        onPress={switchToScheduleScreen}
+                        onPress={switchToBrightnessScreen}
                     />
                 </TouchableHighlight>
             </View>
