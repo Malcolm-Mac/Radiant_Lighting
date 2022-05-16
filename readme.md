@@ -1,4 +1,4 @@
-## calendar Event App
+## Radiant Lighting Home Automation App
 
 This app will save your calendar event in your native iOS and android calendar.
 
